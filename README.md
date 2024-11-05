@@ -1,10 +1,11 @@
-# boilerplate
+# boilerplate version 1.03
 Starting point for simple projects
 
 # left off
-* added provder and 2 pages
+* added Config (for version)
+* pruned stuff
+* style app
+* added provider and 2 pages
 
 # next
-* prune it
-* style it better 
-   + appbar, buttons 
+* ? (nothing)
