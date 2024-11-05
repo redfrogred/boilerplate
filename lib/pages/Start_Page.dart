@@ -21,7 +21,6 @@ class _Start_PageState extends State<Start_Page> {
   @override
   void initState() {
     super.initState();
-    // Utils.log( filename, 'initState()' );
     WidgetsBinding.instance
         .addPostFrameCallback((_) => _addPostFrameCallbackTriggered(context));
 
@@ -30,18 +29,15 @@ class _Start_PageState extends State<Start_Page> {
 
   @override
   void dispose() {
-    // Utils.log( filename, 'dispose()');
     super.dispose();
   }
 
   // (this page) methods
   void _buildTriggered() {
-    // Utils.log( filename, '_buildTriggered()');
   }
 
   // addPostFrameCallback" is called after build completed
   void _addPostFrameCallbackTriggered(context) {
-    // Utils.log( filename, '_addPostFrameCallbackTriggered() (build completed)');
   }
 
   @override
@@ -59,7 +55,6 @@ class _Start_PageState extends State<Start_Page> {
             automaticallyImplyLeading: true,
             title: Text(filename),
             centerTitle: true,
-            backgroundColor: Colors.blue,
           ),
           body: Container(
             width: double.infinity,
@@ -68,8 +63,14 @@ class _Start_PageState extends State<Start_Page> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                const Padding(
+                  padding: EdgeInsets.fromLTRB(0,0,0,0),
+                  child: Text( 'Use the "+" to add 1 to counter',
+                      style: TextStyle( fontSize: 16)
+                    ),
+                ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0,20,0,20),
+                  padding: const EdgeInsets.fromLTRB(0,20,0,20),
                   child: Text( context.watch<Count>().show_counter_value,
                       style: const TextStyle( fontSize: 48)
                     ),

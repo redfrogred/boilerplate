@@ -14,7 +14,6 @@ class End_Page extends StatelessWidget {
 
   // (this page) methods
   void _buildTriggered() {
-    //  Utils.log( filename, '_buildTriggered()');
   }  
 
  @override
@@ -24,7 +23,6 @@ class End_Page extends StatelessWidget {
     
     return WillPopScope(
       onWillPop: () async {
-        //Utils.log( filename, 'pop()!');
         return true;  //  this allows the back button to work (if true)
       },  
       child: SafeArea(
@@ -33,7 +31,6 @@ class End_Page extends StatelessWidget {
             automaticallyImplyLeading: true,
             title: Text(filename),
             centerTitle: true,
-            backgroundColor: Colors.blue,
           ),
           body: Container(
             width: double.infinity,
